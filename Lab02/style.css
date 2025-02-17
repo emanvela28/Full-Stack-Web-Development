@@ -1,0 +1,200 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------- GLOBAL STYLES -------- */
+body {
+    background: linear-gradient(to right, #f4f4f4, #e6e6e6);
+    color: #333;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* -------- NAVIGATION BAR -------- */
+nav {
+    background-color: #222;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #ff4500;
+    padding: 12px 22px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff3300;
+}
+
+/* -------- INDEX PAGE STYLES -------- */
+h1, p, img {
+    margin: 20px auto;
+}
+
+/* Image styling for index page */
+img {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Community paragraph styling */
+.community {
+    font-size: 18px;
+    color: #444;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* -------- HISTORY PAGE STYLES -------- */
+.history-text {
+    font-size: 18px;
+    color: #444;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Image styling for history page */
+.history-image {
+    width: 450px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* -------- TYPES PAGE STYLES -------- */
+/* Styling for motorcycle image on types page */
+.types-image {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Styling for Types Page Description */
+.types-description {
+    font-size: 18px;
+    color: #444;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Grid layout for types page */
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+/* Individual motorcycle category card */
+.type-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.type-card h2 {
+    color: #ff4500;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.type-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Lists inside cards */
+.type-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.type-card ul li {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.type-card ul ul {
+    list-style-type: circle;
+    padding-left: 15px;
+}
+
+/* -------- SAFETY PAGE STYLES -------- */
+/* Safety Page Image Styling */
+.safety-image {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Safety Paragraph Styling */
+.safety-text {
+    font-size: 18px;
+    color: #444;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: center;
+}
