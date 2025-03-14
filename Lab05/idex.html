@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Grades Management</h1>
+
+    <div class="form-container">
+        <h3>Add Student</h3>
+        <input type="text" id="newName" placeholder="Student Name">
+        <input type="number" id="newGrade" placeholder="Grade">
+        <button onclick="addStudent()">Add</button>
+    </div>
+
+    <div class="form-container">
+        <h3>Find Grade</h3>
+        <input type="text" id="searchName" placeholder="Student Name">
+        <button onclick="getGrade()">Search</button>
+    </div>
+
+    <button onclick="getAllGrades()">Show All Students</button>
+
+    <table id="gradesTable">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="gradesBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
