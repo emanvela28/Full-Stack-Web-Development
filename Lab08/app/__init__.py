@@ -8,6 +8,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SelectField
 from wtforms.validators import DataRequired
 from wtforms.fields import SelectField
+from flask_admin.menu import MenuLink
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -43,6 +44,7 @@ class MyAdminIndexView(AdminIndexView):
 # Admin Form
 class UserForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
+    full_name = StringField('Full Name', validators=[DataRequired()])
     password = PasswordField('Password')  # Optional unless creating a new user
     role = SelectField('Role', choices=[
         ('student', 'Student'),
@@ -54,8 +56,9 @@ class UserForm(FlaskForm):
 class UserAdmin(SecureModelView):
     form = UserForm
     column_exclude_list = ['password']
-    column_searchable_list = ['username', 'role']
+    column_searchable_list = ['username', 'role', 'full_name']
     column_filters = ['role']
+    column_list = ['username', 'full_name', 'role']
 
     def delete_model(self, model):
         if model.role == 'teacher' and model.courses_taught:
@@ -114,7 +117,6 @@ class EnrollmentAdmin(SecureModelView):
     }
 
 
-
 # App factory
 def create_app():
     app = Flask(__name__)
@@ -133,5 +135,6 @@ def create_app():
     admin.add_view(UserAdmin(User, db.session))
     admin.add_view(CourseAdmin(Course, db.session))
     admin.add_view(EnrollmentAdmin(Enrollment, db.session))
+    admin.add_link(MenuLink(name='Logout', category='', url='/logout'))
 
     return app
